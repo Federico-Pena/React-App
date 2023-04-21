@@ -1,5 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
+const React = require( 'react')
+const { createRoot }= require( 'react-dom/client');
 
-ReactDOM.render(<h1>Hola Mundo</h1>, document.getElementById("app"))
+const appRoot = document.getElementById("appRoot")
 
+const root = createRoot(appRoot); 
+root.render(
+  <h1>Hola mundo</h1>
+);

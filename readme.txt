@@ -53,9 +53,10 @@ Base de React con webpack y babel
       }
     ]
   }
+}
   -----------------------------------------------
   Quedaria asi
-
+{
   const path = require('path');
 
 module.exports = {
@@ -104,13 +105,15 @@ Instalar el preset {
 
 11)Hola Mundo en React
           {
-            import React from "react";
-            import ReactDOM from "react-dom";
+            const React = require( 'react')
+            const { createRoot }= require( 'react-dom/client');
 
+            const appRoot = document.getElementById("appRoot")
 
-
-              //El primer parametro en lo que se quiere renderizar y el segundo es donde
-            ReactDOM.render(<h1>Hola Mundo</h1>, document.getElementById("app"))
-            }
+            const root = createRoot(appRoot); 
+            root.render(
+              <h1>Hola mundo</h1>
+            );
+                        }
 
 
